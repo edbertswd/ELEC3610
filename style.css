@@ -7,18 +7,43 @@
 
 /* Body and Layout */
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+    color: #0056b3; /* Blue text */
     line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Header Styling */
 header {
-    background-color: #007BFF;
-    padding: 10px 0;
-    color: white;
+    background-color: #ffffff; /* White background */
+    color: #0056b3; /* Blue text */
+    padding: 25px 40px; /* More padding for a larger header */
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Logo Container */
+.logo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; /* Add a little space between logo and navigation */
+}
+
+.logo {
+    height: 90px; /* Adjust logo size */
+    width: auto;
+}
+
+/* Navigation */
 header nav ul {
     list-style: none;
     display: flex;
@@ -26,66 +51,113 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0 25px;
 }
 
 header nav ul li a {
-    color: white;
+    color: #0056b3; /* Blue text for links */
     text-decoration: none;
     font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00; /* Yellow hover effect */
+    transform: scale(1.1); /* Slight scaling for hover effect */
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px; /* More generous padding for cleaner spacing */
+    text-align: center;
+    margin-top: 0; /* Remove any margin from the top to ensure full-width */
 }
 
 /* Hero Section */
 .hero {
+    width: 100%; /* Ensure the hero section stretches across the full width */
+    padding: 80px 20px; /* Adjusted padding for balance */
+    background-color: #f4f7fa; /* Light background */
     text-align: center;
-    margin-top: 50px;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 48px; /* Larger font size for a more striking header */
+    font-weight: 700;
     margin-bottom: 20px;
-    color: #333;
+    color: #0056b3; /* Blue text */
+    line-height: 1.4;
+    max-width: 900px; /* Control the width for better alignment */
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.hero p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
 .buttons {
-    margin: 20px 0;
+    margin-top: 30px;
 }
 
 button {
-    padding: 15px 30px;
+    padding: 15px 40px;  /* Adjusted padding */
     font-size: 18px;
-    margin: 0 10px;
-    border: none;
+    background-color: #0056b3; /* Blue background */
+    color: white; /* White text */
     cursor: pointer;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;  
+    width: auto;  
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #003d7a; /* Darker blue on hover */
+    transform: translateY(-4px);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px #003d7a; /* Focus ring for accessibility */
 }
 
 /* Benefits Section */
 .benefits {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 80px; /* More space for better flow */
+    padding: 0 20px;
 }
 
 .benefits div {
-    background-color: #f8f9fa;
-    padding: 20px;
-    margin: 0 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 40px;
+    margin: 0 20px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     flex: 1;
+    text-align: center;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefits div:hover {
+    transform: translateY(-10px); /* Hover effect */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 .benefits h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    color: #0056b3; /* Blue headings */
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .benefits p {
@@ -95,21 +167,31 @@ button:hover {
 
 /* Footer */
 footer {
-    background-color: #007BFF;
-    color: white;
+    background-color: #0056b3; /* Blue background */
+    color: white; /* White text */
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    font-size: 16px;
     margin-top: 50px;
+    letter-spacing: 1px;
 }
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .buttons {
+        margin-top: 20px;
+    }
+
     .benefits {
         flex-direction: column;
         align-items: center;
     }
 
     .benefits div {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 }

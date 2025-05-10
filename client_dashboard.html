@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#post-job">Post Job</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="post-job">
+            <h1>Post a Job</h1>
+            <form>
+                <label for="job-title">Job Title</label>
+                <input type="text" id="job-title" placeholder="Web Development Project">
+
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Seeking a part-time web developer to build and maintain a business website."></textarea>
+
+                <label for="skills">Skills Required</label>
+                <input type="text" id="skills" placeholder="HTML, CSS, JavaScript">
+
+                <label for="budget">Budget</label>
+                <input type="text" id="budget" placeholder="$1,200">
+
+                <label for="timeline">Timeline</label>
+                <input type="text" id="timeline" placeholder="3 weeks">
+
+                <button type="submit">Post Job</button>
+            </form>
+        </section>
+
+        <section id="applicants">
+            <h1>Applicants</h1>
+            <div class="applicant">
+                <p>John Chen (UNSW)</p>
+                <button>Shortlist</button>
+            </div>
+            <div class="applicant">
+                <p>Sarah Williams (University of Sydney)</p>
+                <button>Shortlist</button>
+            </div>
+            <div class="applicant">
+                <p>Emily Zhang (UTS)</p>
+                <button>Shortlist</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Stulance. All rights reserved.</p>
+    </footer>
+</body>
+</html>

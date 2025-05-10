@@ -1,11 +1,8 @@
-// Function to show student section
-function showStudentSection() {
-    alert("Student section: Here students can sign up to find freelance opportunities.");
-    // Additional student section actions can be added here.
-}
+// Navigation Button Functions for Client and Student
+document.getElementById("studentBtn").addEventListener("click", function() {
+    window.location.href = "student_dashboard.html";  // Redirect to student dashboard
+});
 
-// Function to show client section
-function showClientSection() {
-    alert("Client section: Here clients can post jobs and access student talent.");
-    // Additional client section actions can be added here.
-}
+document.getElementById("clientBtn").addEventListener("click", function() {
+    window.location.href = "client_dashboard.html";  // Redirect to client dashboard
+});
