@@ -7,43 +7,88 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#settings">Settings</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-    <main>
-        <section id="profile">
-            <h1>Student Profile</h1>
-            <div class="profile-info">
-                <h2>Academic Background</h2>
-                <p>University: University of Sydney</p>
-                <p>Degree: Bachelor of Computer Science</p>
-                <p>Email: johnchen@uni.sydney.edu.au</p>
-            </div>
-            <div class="skills">
-                <h2>Skills</h2>
+        <main class="dashboard-main">
+            <!-- Profile Section -->
+            <section id="profile" class="section">
+                <h1>Student Profile</h1>
+                <p><strong>University:</strong> University of Sydney</p>
+                <p><strong>Degree:</strong> Bachelor of Computer Science</p>
+                <p><strong>Email:</strong> johnchen@uni.sydney.edu.au</p>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="section">
+                <h1>Skills</h1>
                 <p>HTML, CSS, JavaScript, React</p>
-            </div>
-            <div class="portfolio">
-                <h2>Portfolio</h2>
-                <p>Link to portfolio: <a href="#">My Portfolio</a></p>
-            </div>
-            <div class="availability">
-                <h2>Availability</h2>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section class="section">
+                <h1>Portfolio</h1>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                        <h3>Personal Website</h3>
+                        <a href="#" target="_blank">View Project</a>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                        <h3>Weather App (React)</h3>
+                        <a href="#" target="_blank">View Project</a>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                        <h3>Data Dashboard</h3>
+                        <a href="#" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Availability Section -->
+            <section class="section">
+                <h1>Availability</h1>
                 <p>Available for part-time work, 10-15 hours per week.</p>
-            </div>
-            <div class="badge">
-                <h2>Verified Student</h2>
+            </section>
+
+            <!-- Verified Badge Section -->
+            <section class="section">
+                <h1>Verified Student</h1>
                 <p><span class="verified-badge">✔️ Verified</span> via University Email</p>
+            </section>
+
+            <!-- Dashboard Widgets -->
+            <div class="dashboard-grid">
+                <div class="widget">
+                    <h3>GPA</h3>
+                    <p>3.8 / 4.0</p>
+                </div>
+                <div class="widget">
+                    <h3>Upcoming Projects</h3>
+                    <p>AI Research Presentation - May 20</p>
+                </div>
+                <div class="widget">
+                    <h3>Tasks Due</h3>
+                    <p>2 Assignments Pending</p>
+                </div>
+                <div class="widget">
+                    <h3>Certifications</h3>
+                    <p>Google Cloud Certified, AWS Practitioner</p>
+                </div>
             </div>
-        </section>
-    </main>
+        </main>
+    </div>
 
     <footer>
         <p>&copy; 2025 Stulance. All rights reserved.</p>
