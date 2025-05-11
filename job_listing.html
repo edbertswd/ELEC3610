@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Details</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="#applications">My Applications</a></li>
+                <li><a href="#profile">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <section class="section" id="job-details">
+            <!-- Job details will be dynamically loaded here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Stulance. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Example job data (You can replace this with backend data or JSON)
+        const jobs = {
+            1: {
+                title: "Frontend Developer",
+                company: "TechWave Solutions",
+                skills: "HTML, CSS, JavaScript, React",
+                budget: "$1,500",
+                timeline: "4 weeks",
+                description: "We are looking for a talented frontend developer to join our team and help build modern, responsive web applications."
+            },
+            2: {
+                title: "Data Analyst Intern",
+                company: "DataXplore",
+                skills: "Python, SQL, Excel",
+                budget: "$1,000",
+                timeline: "6 weeks",
+                description: "Join our analytics team to explore large datasets and help generate insights for our business operations."
+            },
+            3: {
+                title: "Graphic Designer",
+                company: "Creative Minds",
+                skills: "Photoshop, Illustrator, Figma",
+                budget: "$900",
+                timeline: "3 weeks",
+                description: "We need a creative designer to produce marketing materials and social media content for our new campaign."
+            }
+        };
+
+        // Extract Job ID from URL
+        const params = new URLSearchParams(window.location.search);
+        const jobId = params.get("id");
+
+        // Populate Job Details
+        const job = jobs[jobId];
+        const detailsSection = document.getElementById("job-details");
+
+        if (job) {
+            detailsSection.innerHTML = `
+                <h1>${job.title}</h1>
+                <p><strong>Company:</strong> ${job.company}</p>
+                <p><strong>Skills Required:</strong> ${job.skills}</p>
+                <p><strong>Budget:</strong> ${job.budget}</p>
+                <p><strong>Timeline:</strong> ${job.timeline}</p>
+                <p><strong>Description:</strong> ${job.description}</p>
+                <button class="dashboard-button" onclick="alert('Application Submitted!')">Apply Now</button>
+            `;
+        } else {
+            detailsSection.innerHTML = `<h1>Job Not Found</h1>`;
+        }
+    </script>
+</body>
+</html>

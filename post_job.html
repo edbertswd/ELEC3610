@@ -1,1 +1,72 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#applications">My Applications</a></li>
+                <li><a href="#profile">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <section class="section">
+            <h1>Available Jobs</h1>
+            
+            <!-- Search and Filter -->
+            <div class="search-filter">
+                <input type="text" id="search" placeholder="Search jobs...">
+                <select id="filter-skill">
+                    <option value="">All Skills</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Data Analysis">Data Analysis</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                </select>
+                <button class="dashboard-button">Search</button>
+            </div>
+
+            <!-- Job Listings -->
+            <div class="job-listings">
+                <div class="job-card">
+                    <h3>Frontend Developer</h3>
+                    <p><strong>Company:</strong> TechWave Solutions</p>
+                    <p><strong>Skills:</strong> HTML, CSS, JavaScript, React</p>
+                    <p><strong>Budget:</strong> $1,500</p>
+                    <p><strong>Timeline:</strong> 4 weeks</p>
+                    <button class="dashboard-button" onclick="location.href='job_listing.html?id=1'">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <h3>Data Analyst Intern</h3>
+                    <p><strong>Company:</strong> DataXplore</p>
+                    <p><strong>Skills:</strong> Python, SQL, Excel</p>
+                    <p><strong>Budget:</strong> $1,000</p>
+                    <p><strong>Timeline:</strong> 6 weeks</p>
+                    <button class="dashboard-button" onclick="location.href='job_listing.html?id=2'">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <h3>Graphic Designer</h3>
+                    <p><strong>Company:</strong> Creative Minds</p>
+                    <p><strong>Skills:</strong> Photoshop, Illustrator, Figma</p>
+                    <p><strong>Budget:</strong> $900</p>
+                    <p><strong>Timeline:</strong> 3 weeks</p>
+                    <button class="dashboard-button" onclick="location.href='job_listing.html?id=3'">Apply Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Stulance. All rights reserved.</p>
+    </footer>
+</body>
+</html>
